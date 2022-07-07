@@ -322,7 +322,7 @@ def ads_class(driver,l0g):
 						print("NO  0000 recaptcha  ",e)
 						reefree(driver)
 		except :
-			input("main captcha error")
+			print("main captcha error")
 
 
 
