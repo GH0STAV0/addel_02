@@ -225,6 +225,15 @@ def ads_class(driver,l0g):
 		time.sleep(3)
 		print('button click')
 		# //*[@id="body"]/div[3]/div[1]/header/div/div/nav[2]/div[2]/a[1]/span[2]
+		# //*[@id="body"]/div[3]/div[2]/div[2]
+		try:
+			SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="body"]/div[3]/div[2]/div[2]')))
+			SUCCESS_MSG_BUTTON.click()
+			print('Cookies click')
+			
+		except Exception as e:
+			print("no Cookies")
+
 		SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="body"]/div[3]/div[1]/header/div/div/nav[2]/div[2]/a[1]/span[2]')))
 		SUCCESS_MSG_BUTTON.click()
 		print('button singup')
