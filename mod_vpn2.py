@@ -247,3 +247,4 @@ def fnc_vpn():
 	os.system("echo '' > /var/log/openvpn/openvpn.log")
 
 
+# fnc_vpn ()
