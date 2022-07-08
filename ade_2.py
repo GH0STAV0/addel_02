@@ -243,6 +243,11 @@ def ads_class(driver,l0g):
 		SUCCESS_MSG_BUTTON.click()
 		SUCCESS_MSG_BUTTON.send_keys(user_arr_info[5],Keys.TAB,user_arr_info[0],Keys.TAB,"baba123A*")
 		print('READY TO KILL bCAOTCHA singup')
+		time.sleep(3)
+		SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.ID, 'sign_up_input_login')))
+		SUCCESS_MSG_BUTTON.click()
+		SUCCESS_MSG_BUTTON.send_keys(user_arr_info[5],Keys.TAB,user_arr_info[0],Keys.TAB,"baba123A*")
+
 		number_fra=driver.find_elements_by_tag_name("iframe")
 		iframes = driver.find_elements_by_xpath("//iframe")
 		print(str(len(iframes)))
