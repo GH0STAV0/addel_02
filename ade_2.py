@@ -20,6 +20,7 @@ import io
 from pydub import AudioSegment
 import speech_recognition as sr
 import activation_link
+import save_hamster
 
 
 urls_BVB="https://xhamsterlive.com/adel_love"
@@ -212,6 +213,7 @@ def ads_class(driver,l0g):
 	try:
 		driver.get(urls_BVB)
 		print("https://xhamsterlive.com/adel_love")
+		driver.set_page_load_timeout(30)
 		# input("https://xhamsterlive.com/rich_peach")
 		# driver.get("https://webglreport.com/")
 		# time.sleep(3)
@@ -298,6 +300,7 @@ def ads_class(driver,l0g):
 						# singup_green_button.click()
 						# //*[@id="body"]/div[2]/div[1]/div/div[2]/div[1]/div[1]/form/div[5]/button
 						print("SING-UP FINISHED !!!!!!!!")
+						driver.switch_to.default_content()
 						# //*[@id="body"]/div[3]/div[1]/div[2]/span/a[2]
 						time.sleep(5)
 						SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="body"]/div[3]/div[1]/div[2]/span/a[2]')))
@@ -306,6 +309,8 @@ def ads_class(driver,l0g):
 						SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="app"]/div[2]/div[3]/div/div/div/div[2]/div/div[1]/div/div[3]/div/div[1]/div[3]/button')))
 						SUCCESS_MSG_BUTTON.click()
 						print('hm... FAVORIT')
+						save_hamster.insert_to_db(user_arr_info[0])
+
 
 						# 
 						time.sleep(5)
@@ -320,7 +325,7 @@ def ads_class(driver,l0g):
 						# break
 					except Exception as e:
 						print("NO  0000 recaptcha  ",e)
-						reefree(driver)
+						# reefree(driver)
 		except :
 			print("main captcha error")
 
