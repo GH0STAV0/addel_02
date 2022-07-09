@@ -1,11 +1,12 @@
 {
-  "ip": "138.199.58.238",
-  "city": "São Paulo",
-  "region": "São Paulo",
-  "country": "BR",
-  "loc": "-23.5475,-46.6361",
-  "org": "AS212238 Datacamp Limited",
-  "postal": "01000-000",
-  "timezone": "America/Sao_Paulo",
+  "ip": "216.131.104.43",
+  "hostname": "43.104.131.216.unassigned.reliablehosting.com",
+  "city": "Charlotte",
+  "region": "North Carolina",
+  "country": "US",
+  "loc": "35.2271,-80.8431",
+  "org": "AS174 Cogent Communications",
+  "postal": "28281",
+  "timezone": "America/New_York",
   "readme": "https://ipinfo.io/missingauth"
 }
