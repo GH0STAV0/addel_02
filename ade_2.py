@@ -436,7 +436,7 @@ def starting_tasks(l0g):
 		stage_1()### CLEAR
 		# print(l0g)
 		# os.system("curl -sx socks5://127.0.0.1:9050 ifconfig.co | grep -oP '(?<=Your IP</span>: ).*(?=</span>)'")
-		# mod_vpn2.fnc_vpn ()
+		mod_vpn2.fnc_vpn ()
 		cnf_bvb.alias_send_msg("starting chom")
 		# mod_vpn.renew_connection()
 		# serv,ops=mod_driver.build_driver(width ,height)

@@ -1,12 +1,11 @@
 {
-  "ip": "85.10.57.232",
-  "hostname": "85-10-57-232.croweb.host",
-  "city": "Donji Čehi",
-  "region": "City of Zagreb",
-  "country": "HR",
-  "loc": "45.7684,15.9641",
-  "org": "AS29485 A1 Hrvatska d.o.o.",
-  "postal": "10040",
-  "timezone": "Europe/Zagreb",
+  "ip": "173.245.211.124",
+  "city": "Singapore",
+  "region": "Singapore",
+  "country": "SG",
+  "loc": "1.2897,103.8501",
+  "org": "AS33438 StackPath, LLC.",
+  "postal": "018989",
+  "timezone": "Asia/Singapore",
   "readme": "https://ipinfo.io/missingauth"
 }
