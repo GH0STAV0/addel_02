@@ -33,7 +33,7 @@ def connection_imap():
 
 def gather_acces(emmail):
 	print("search for email")
-	magic_formul='(TO "xxxxx" SUBJECT "Verify your email address")'
+	magic_formul='(SUBJECT "Verify your email address")'
 	magic_formul=magic_formul.replace("xxxxx",emmail)
 		# magic_formul='(SUBJECT "Verify your email address")'
 
@@ -42,14 +42,14 @@ def gather_acces(emmail):
 	mail=connection_imap()
 	mail.select('INBOX')
 	status, data = mail.search(None, magic_formul)
-	# for num in data[0].split():
-	# # Retrieve email message by ID
-	# 	tmp, data = mail.fetch(num, '(RFC822)')
-	# 	print('Message: {0}\n'.format(data[0][1]))
+	for num in data[0].split():
+	# Retrieve email message by ID
+		tmp, data = mail.fetch(num, '(RFC822)')
+		print('Message: {0}\n'.format(data[0][1]))
 	# 	break
 	
-	print(status)
 	ids = data[0]
+	print(status,data[0])
 	unread_msg_nums = data[0].split()
 	print (" [ ",len(unread_msg_nums)," ]",flush=True,end= " ")
 	if len(unread_msg_nums) == 0 :
@@ -106,5 +106,5 @@ def gather_acces(emmail):
 #read_uniq()
 #gather_acces("john21peolg6brown@multi-service-seller.tk")
 # emmail="aaron387ifowler@dark-market-crypto.tk"
-# emmaily="justin469nkelly@green-vovo.nl.eu.org"
+# emmaily="jackissmith@blue-vovo.nl.eu.org"
 # gather_acces(emmaily)

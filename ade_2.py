@@ -24,6 +24,8 @@ import save_hamster
 
 
 urls_BVB="https://xhamsterlive.com/adel_love"
+# urls_BVB="https://xhamsterlive.com/rozana_holmess"
+
 
 # urls_BVB="https://indab0x.nl.eu.org/"
 
@@ -296,10 +298,12 @@ def ads_class(driver,l0g):
 									except Exception as e:
 										print("NO ERROR MESSAGE ")
 
+
 								except Exception as e:
 									print("NO  recaptcha  ",e)
 									driver.switch_to.default_content()
 									time.sleep(3)
+									# input("fix")
 
 
 
@@ -323,6 +327,14 @@ def ads_class(driver,l0g):
 						SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="app"]/div[2]/div[3]/div/div/div/div[2]/div/div[1]/div/div[3]/div/div[1]/div[3]/button')))
 						SUCCESS_MSG_BUTTON.click()
 						print('hm... FAVORIT')
+
+						driver.get("https://xhamsterlive.com/rozana_holmes")
+						SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="body"]/div[3]/div[1]/div[2]/span/a[2]')))
+						print("LETS ACTIVATED  !!!!!!!!",user_arr_info[0])
+						print('hm... hm')
+						SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="app"]/div[2]/div[3]/div/div/div/div[2]/div/div[1]/div/div[3]/div/div[1]/div[3]/button')))
+						SUCCESS_MSG_BUTTON.click()
+
 						save_hamster.insert_to_db(user_arr_info[0])
 
 
@@ -424,7 +436,7 @@ def starting_tasks(l0g):
 		stage_1()### CLEAR
 		# print(l0g)
 		# os.system("curl -sx socks5://127.0.0.1:9050 ifconfig.co | grep -oP '(?<=Your IP</span>: ).*(?=</span>)'")
-		mod_vpn2.fnc_vpn ()
+		# mod_vpn2.fnc_vpn ()
 		cnf_bvb.alias_send_msg("starting chom")
 		# mod_vpn.renew_connection()
 		# serv,ops=mod_driver.build_driver(width ,height)
