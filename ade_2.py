@@ -343,6 +343,7 @@ def ads_class(driver,l0g):
 						SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="app"]/div[2]/div[3]/div/div/div/div[2]/div/div[1]/div/div[3]/div/div[1]/div[3]/button')))
 						SUCCESS_MSG_BUTTON.click()
 						print('hm... FAVORIT')
+						time.sleep(5)
 
 						driver.get("https://xhamsterlive.com/rozana_holmes")
 						SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="body"]/div[3]/div[1]/div[2]/span/a[2]')))
