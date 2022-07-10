@@ -1,12 +1,10 @@
 {
-  "ip": "216.131.110.134",
-  "hostname": "134.110.131.216.client.dyn.strong-sf3.reliablehosting.com",
-  "city": "Langenzersdorf",
-  "region": "Lower Austria",
-  "country": "AT",
-  "loc": "48.3043,16.3614",
-  "org": "AS62651 Strong Technology, LLC.",
-  "postal": "1210",
-  "timezone": "Europe/Vienna",
+  "ip": "103.4.31.140",
+  "city": "Taipei",
+  "region": "Taiwan",
+  "country": "TW",
+  "loc": "25.0478,121.5319",
+  "org": "AS55720 Gigabit Hosting Sdn Bhd",
+  "timezone": "Asia/Taipei",
   "readme": "https://ipinfo.io/missingauth"
 }

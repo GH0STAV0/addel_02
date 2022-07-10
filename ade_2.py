@@ -154,6 +154,16 @@ def lets_play(l0g):
 		print(emoji.emojize("Ok "' :check_mark_button: :alien:'))
 	except:
 		pass
+	try:
+		print("Clean LOGS ...... ",end='')
+		os.system('rm /var/log/openvpn/openvpn.log')
+		# os.system('rm /var/log/openvpn/openvpn.log')
+		os.system("ps aux | grep -i openvpn | awk '{print $2}'|xargs kill -9 > /dev/null 2>&1")
+		os.system("ps aux | grep -i chromedriver | awk '{print $2}'|xargs kill -9 > /dev/null 2>&1")
+		print(emoji.emojize("Ok "' :check_mark_button: :alien:'))
+	except:
+		pass
+	# os.system('rm /var/log/openvpn/openvpn.log')
 
 
 #####################################
