@@ -206,14 +206,19 @@ def fnc_vpn():
 
 		if logfile.read().find('Sequence Completed') !=-1:
 			print ("OK !!!!!")
-			ac_ip,tz,loc=cnf_bvb.iip()
-			# change_time_zon(tz)
-			os.environ['TZ'] = tz
-			bass=read_pass()
-			def_titi= read_default_timezone()
-			mm=""
-			for i in bass:
-				mm=mm+i
+			try:
+				os.system('rm /var/log/openvpn/openvpn.log')
+
+				ac_ip,tz,loc=cnf_bvb.iip()
+				# change_time_zon(tz)
+				os.environ['TZ'] = tz
+				bass=read_pass()
+				def_titi= read_default_timezone()
+				mm=""
+				for i in bass:
+					mm=mm+i
+			except:
+				pass
 			meddas=mm+def_titi+" [ CONNECTED VPN] [ "+str(1)+" ] : [ "+ random_vpn  +" ] \n"+"|| [ IP ] : [ "+ ac_ip+" ] || [ TIME_Z ] : ["+ tz+" ]"+"\n"
 			# " [ "+url_1+" ]"
 			# append_to_l0g(meddas)
