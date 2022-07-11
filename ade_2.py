@@ -345,7 +345,8 @@ def ads_class(driver,l0g):
 						print('hm... FAVORIT')
 						time.sleep(5)
 
-						driver.get("https://xhamsterlive.com/rozana_holmes")
+						# driver.get("https://xhamsterlive.com/rozana_holmes")
+						driver.get("https://xhamsterlive.com/rich_peach")
 						SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="body"]/div[3]/div[1]/div[2]/span/a[2]')))
 						print("LETS ACTIVATED  !!!!!!!!",user_arr_info[0])
 						print('hm... hm')
