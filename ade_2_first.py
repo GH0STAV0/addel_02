@@ -250,25 +250,18 @@ def ads_class(driver,l0g):
 		SUCCESS_MSG_BUTTON.click()
 		print('button singup')
 		time.sleep(3)
-		# input("lolpt ")
-		SINGUP_WITHOUT_EMAIL=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.btn.btn-default.btn-inline-block.sign-up-new__without-email-btn')))
-		SINGUP_WITHOUT_EMAIL.click()
-		time.sleep(3)
-		# 
-		
 		# sign_up_input_login
-		SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="username_input"]/input')))
+		SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.ID, 'sign_up_input_login')))
 		SUCCESS_MSG_BUTTON.click()
-		SUCCESS_MSG_BUTTON.send_keys(user_arr_info[5],Keys.TAB,"baba123A*")
+		SUCCESS_MSG_BUTTON.send_keys(user_arr_info[5],Keys.TAB,user_arr_info[0],Keys.TAB,"baba123A*")
 		print('READY TO KILL bCAOTCHA singup')
 		time.sleep(3)
-		SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="username_input"]/input')))
+		SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.ID, 'sign_up_input_login')))
 		SUCCESS_MSG_BUTTON.click()
 		SUCCESS_MSG_BUTTON.clear()
-		SUCCESS_MSG_BUTTON.send_keys(user_arr_info[5],Keys.TAB,"baba123A*")
+		SUCCESS_MSG_BUTTON.send_keys(user_arr_info[5],Keys.TAB,user_arr_info[0],Keys.TAB,"baba123A*")
 		# recaptcha-anchor-label
-		
-		SUCCESS_MSG_BUTTON=WebDriverWait(driver, 22).until(EC.presence_of_element_located((By.ID, 'signup_without_email_recaptcha')))
+		SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.ID, 'sign_up_irecaptcha')))
 		print('REDY CAPTCHA')
 
 
@@ -350,13 +343,11 @@ def ads_class(driver,l0g):
 							
 							driver.switch_to.default_content()
 							time.sleep(5)
-							SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="body"]/div[2]/div[1]/div[2]/div/div[2]/form/button')))
+							SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="body"]/div[2]/div[1]/div/div[2]/div[1]/div[1]/form/div[5]/button')))
 							SUCCESS_MSG_BUTTON.click()
 
 						except Exception as e:
 							print('cant click')
-
-						# //*[@id="body"]/div[2]/div[1]/div[2]/div/div[2]/form/button
 
 						# singup_green_button=WebDriverWait(driver, 18).until(EC.presence_of_element_located((By.XPATH, '//*[@id="recaptcha-audio-button"]')))
 						# singup_green_button.click()
@@ -365,9 +356,7 @@ def ads_class(driver,l0g):
 						driver.switch_to.default_content()
 						# //*[@id="body"]/div[3]/div[1]/div[2]/span/a[2]
 						time.sleep(5)
-						# input("okkkk")
-						# //*[@id="app"]/div[2]/div[3]/div/div/div/div[2]/div/div[1]/div/div[3]/div/div[1]/div[3]/button
-						# SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="body"]/div[3]/div[1]/div[2]/span/a[2]')))
+						SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="body"]/div[3]/div[1]/div[2]/span/a[2]')))
 						print("LETS ACTIVATED  !!!!!!!!",user_arr_info[0])
 						print('hm... hm')
 						SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="app"]/div[2]/div[3]/div/div/div/div[2]/div/div[1]/div/div[3]/div/div[1]/div[3]/button')))
@@ -377,14 +366,13 @@ def ads_class(driver,l0g):
 
 						# driver.get("https://xhamsterlive.com/rozana_holmes")
 						driver.get("https://xhamsterlive.com/rich_peach")
-						# SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="body"]/div[3]/div[1]/div[2]/span/a[2]')))
+						SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="body"]/div[3]/div[1]/div[2]/span/a[2]')))
 						print("LETS ACTIVATED  !!!!!!!!",user_arr_info[0])
 						print('hm... hm')
 						SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="app"]/div[2]/div[3]/div/div/div/div[2]/div/div[1]/div/div[3]/div/div[1]/div[3]/button')))
 						SUCCESS_MSG_BUTTON.click()
 
 						save_hamster.insert_to_db(user_arr_info[0])
-						# time.sleep(5)
 
 
 						# 
