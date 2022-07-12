@@ -311,6 +311,20 @@ def ads_class(driver,l0g):
 										text_cap.send_keys(audio_output)
 										time.sleep(2)
 										text_cap.send_keys(Keys.ENTER)
+										time.sleep(2)
+										try:
+											eto_firstName=WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, 'audio-source')))
+											download_link = eto_firstName.get_attribute('src')
+											print(download_link)
+											audio_output= audio_fonction(download_link)
+											text_cap=WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID,'audio-response')))
+											text_cap.send_keys(audio_output)
+											time.sleep(2)
+											text_cap.send_keys(Keys.ENTER)
+											# time.sleep(2)
+										except Exception as e:
+											print("again ERROR MESSAGE ")
+
 									except Exception as e:
 										print("NO ERROR MESSAGE ")
 
@@ -325,10 +339,15 @@ def ads_class(driver,l0g):
 
 
 
-						driver.switch_to.default_content()
-						time.sleep(5)
-						SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="body"]/div[2]/div[1]/div/div[2]/div[1]/div[1]/form/div[5]/button')))
-						SUCCESS_MSG_BUTTON.click()
+						try:
+							
+							driver.switch_to.default_content()
+							time.sleep(5)
+							SUCCESS_MSG_BUTTON=WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.XPATH, '//*[@id="body"]/div[2]/div[1]/div/div[2]/div[1]/div[1]/form/div[5]/button')))
+							SUCCESS_MSG_BUTTON.click()
+
+						except Exception as e:
+							print('cant click')
 
 						# singup_green_button=WebDriverWait(driver, 18).until(EC.presence_of_element_located((By.XPATH, '//*[@id="recaptcha-audio-button"]')))
 						# singup_green_button.click()
